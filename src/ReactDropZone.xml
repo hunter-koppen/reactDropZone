@@ -1,17 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget id="clevr.reactdropzone.ReactDropZone" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
-        supportedPlatform="Web"
-        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+<widget id="clevr.reactdropzone.ReactDropZone" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Web"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
     <name>React Drop Zone</name>
-    <description>My widget description</description>
+    <description/>
     <icon/>
     <properties>
         <propertyGroup caption="General">
-            <property key="sampleText" type="string" required="false">
-                <caption>Default value</caption>
-                <description>Sample text input</description>
-            </property>
+            <propertyGroup caption="Datasource">
+                <property key="dataEntity" type="datasource" isList="true">
+                    <caption>Data source entity</caption>
+                    <description>Create a nanoflow that returns an empty list of the entity you wish to use to add the files to.</description>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="Attributes">
+                <property key="fileContent" type="attribute" dataSource="dataEntity">
+                    <caption>Binary attribute</caption>
+                    <description>the attribute where the file needs to be stored in.</description>
+                    <attributeTypes>
+                        <attributeType name="Binary"/>
+                    </attributeTypes>
+                </property>
+                <property key="nameAttribute" type="attribute" dataSource="dataEntity">
+                    <caption>Name attribute</caption>
+                    <description>Attribute for the name of the file.</description>
+                    <attributeTypes>
+                        <attributeType name="String"/>
+                    </attributeTypes>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="Editability">
+                <systemProperty key="Editability"/>
+            </propertyGroup>
+            <propertyGroup caption="Visibility">
+                <systemProperty key="Visibility"/>
+            </propertyGroup>
         </propertyGroup>
     </properties>
 </widget>
