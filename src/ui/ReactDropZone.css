@@ -1,6 +1,30 @@
-/*
-Place your custom CSS here
-*/
-.widget-hello-world {
-
+.dropzone {
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+.dropzone-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 8px;
+    border-width: 2px;
+    border-radius: 2px;
+    border-color: #dbdbdb;
+    border-style: dashed;
+    background-color: #fdfdfd;
+    color: #8b8989;
+    outline: none;
+    transition: border 0.24s ease-in-out;
+}
+.dropzone-container > p {
+    margin: 0;
+}
+.dropzone-container:focus {
+    border-color: #333;
+}
+.dropzone-container.disabled {
+    opacity: 0.6;
 }

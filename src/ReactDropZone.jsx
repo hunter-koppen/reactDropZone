@@ -1,10 +1,10 @@
 import { Component, createElement } from "react";
 
-import { HelloWorldSample } from "./components/HelloWorldSample";
+import { DropZoneContainer } from "./components/DropZoneContainer";
 import "./ui/ReactDropZone.css";
 
 export class ReactDropZone extends Component {
     render() {
-        return <HelloWorldSample sampleText={this.props.sampleText} />;
+        return <DropZoneContainer sampleText={this.props.sampleText} />;
     }
 }
